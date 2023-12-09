@@ -26,7 +26,7 @@ function LoginForm() {
     }
     setImgChooserClasses("");
     submit({ name, img }, { method: "PUT"});
-    navigate("home");
+    navigate("/Task-Management-App/home");
   };
 
   const nameInptHandler = (e) => {

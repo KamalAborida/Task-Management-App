@@ -34,7 +34,7 @@ function HomePage() {
 export default HomePage;
 
 export const loader = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   const userData = await getUserData();
   const projectsData = await getProjects();
 

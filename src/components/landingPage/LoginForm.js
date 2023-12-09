@@ -120,8 +120,6 @@ export async function action({ request, params }) {
     img: data.get("img"),
   };
 
-  // console.log(userData);
-
   const response = await fetch(
     "https://test-project-e1028-default-rtdb.firebaseio.com/user.json",
     {
@@ -138,5 +136,4 @@ export async function action({ request, params }) {
   }
 
   return null;
-  // console.log(response);
 }

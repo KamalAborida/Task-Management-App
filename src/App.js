@@ -11,13 +11,13 @@ function App() {
   const routes = createBrowserRouter([
     {
       index: true,
-      path: "/Task-Management-App",
+      path: "Task-Management-App",
       element: <LandingPage />,
       errorElement: <ErrorPage />,
       action: userDataAction,
     },
     {
-      path: "/home",
+      path: "Task-Management-App/home",
       element: <HomePage />,
       errorElement: <ErrorPage />,
       loader: homeLoader,

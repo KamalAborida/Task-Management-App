@@ -69,5 +69,5 @@ export const action = async ({ request, params }) => {
     // Handle other request.method cases if needed
   }
 
-  return redirect("/Task-Management-App/home");
+  return null;
 };

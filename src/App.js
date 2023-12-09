@@ -11,7 +11,7 @@ function App() {
   const routes = createBrowserRouter([
     {
       index: true,
-      path: "/",
+      path: "/Task-Management-App",
       element: <LandingPage />,
       errorElement: <ErrorPage />,
       action: userDataAction,
@@ -33,7 +33,7 @@ function App() {
         activeProject: "",
         activeList: "active",
         updateTasksContainer: () => {},
-        updateApp: () => {}
+        updateApp: () => {},
       }}
     >
       <RouterProvider router={routes} />

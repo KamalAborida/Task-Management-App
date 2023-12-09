@@ -1,10 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { Form } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 function AddProjectModal(props) {
   const [projectName, setProjetcName] = useState("");
+
+  useEffect(() => {
+    if (props.openModal) {
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+      // Lock scrolling
+      document.body.style.overflow = "hidden";
+
+      // Cleanup function to restore scrolling when the component unmounts or when modal is closed
+      return () => {
+        document.body.style.overflow = "auto";
+      };
+    }
+  }, [props.openModal]);
 
   const projectNameHandler = (e) => {
     setProjetcName(e.target.value);

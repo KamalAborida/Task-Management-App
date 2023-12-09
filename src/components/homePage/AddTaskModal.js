@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Form } from "react-router-dom";
 import { motion } from "framer-motion";
 import ReactDOM from "react-dom";
@@ -11,6 +11,24 @@ function AddTaskModal(props) {
   const [time, setTime] = useState("");
 
   const ctx = useContext(AuthContext);
+
+  useEffect(() => {
+    if (props.openModal) {
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+      // Lock scrolling
+      document.body.style.overflow = "hidden";
+
+      // Cleanup function to restore scrolling when the component unmounts or when modal is closed
+      return () => {
+        document.body.style.overflow = "auto";
+      };
+    }
+  }, [props.openModal]);
 
   const nameHandler = (e) => {
     setName(e.target.value);

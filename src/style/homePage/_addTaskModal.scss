@@ -53,3 +53,13 @@
   height: 100vh;
   position: absolute;
 }
+
+@include mobile-media-query {
+  .taskModal-form {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    padding: 1em;
+    max-width: 90%;
+  }
+}

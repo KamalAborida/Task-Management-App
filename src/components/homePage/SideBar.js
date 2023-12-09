@@ -61,6 +61,7 @@ function SideBar(props) {
             closeModalHandler={closeProjectModal}
             method="post"
             key="projectModal"
+            openModal={openModal}
           />
         )}
         {openModal && (

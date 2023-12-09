@@ -28,7 +28,7 @@ function PageContent() {
     <motion.div layout className="pageContent">
       <AnimatePresence>
         {openModal && (
-          <AddTaskModal closeModalHandler={closeTaskModal} method="post" key="taskModal" />
+          <AddTaskModal closeModalHandler={closeTaskModal} method="post" key="taskModal" openModal={openModal} />
         )}
         {openModal && <BackDrop closeModalHandler={closeTaskModal} key="backDrop" />}
       </AnimatePresence>

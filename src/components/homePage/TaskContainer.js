@@ -17,7 +17,6 @@ function TaskContainer(props) {
   };
 
   useEffect(() => {
-    console.log("Worked");
     setTaskList([]); // Clear the taskList when the active project changes
 
     if (ctx.activeProject !== "") {

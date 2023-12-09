@@ -47,6 +47,11 @@ input {
   border-radius: 0;
 }
 
+body {
+  height: 100vh;
+  width: 100%;
+}
+
 .btn {
   padding: 1em;
   border-radius: 10px;
@@ -599,6 +604,15 @@ progress {
   position: absolute;
 }
 
+@media screen and (max-width: 900px) {
+  .taskModal-form {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    padding: 1em;
+    max-width: 90%;
+  }
+}
 .projectModal-form {
   position: absolute;
   top: 25%;
@@ -610,7 +624,8 @@ progress {
   flex-direction: column;
   z-index: 999;
 }
-.projectModal-form input, .projectModal-form textarea {
+.projectModal-form input,
+.projectModal-form textarea {
   font-size: 1.2rem;
   border: 0;
   border-radius: 10px;
@@ -645,4 +660,15 @@ progress {
   height: 100vh;
   z-index: 888;
   position: absolute;
+}
+
+@media screen and (max-width: 900px) {
+  .projectModal-form {
+    position: absolute;
+    top: 25%; /* position the top  edge of the element at the middle of the parent */
+    left: 10%; /* position the left edge of the element at the middle of the parent */
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1.5em;
+  }
 }

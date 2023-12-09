@@ -9,7 +9,8 @@
   flex-direction: column;
   z-index: 999;
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 1.2rem;
     border: 0;
     border-radius: 10px;
@@ -34,7 +35,7 @@
 
   &__title {
     font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     margin-bottom: 20px;
     color: white;
     font-weight: 500;
@@ -48,4 +49,14 @@
   height: 100vh;
   z-index: 888;
   position: absolute;
+}
+
+@include mobile-media-query {
+  .projectModal-form {
+    position: absolute;
+    top: 25%; /* position the top  edge of the element at the middle of the parent */
+    left: 10%; /* position the left edge of the element at the middle of the parent */
+    width: fit-content;
+    padding: 1.5em;
+  }
 }

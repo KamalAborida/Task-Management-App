@@ -1,0 +1,43 @@
+.task {
+  background-color: $task-color;
+  border-radius: 15px;
+  padding: 1em;
+  width: 80%;
+  height: fit-content;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+
+  &__description {
+    margin-bottom: 1em;
+    // width: 90%;
+    // border: 1px solid red;
+    text-wrap: wrap;
+    overflow: hidden;
+    height: fit-content;
+  }
+
+  &__date {
+    align-self: flex-end;
+    margin-bottom: 1em;
+  }
+
+  &__actions-div {
+    display: flex;
+    justify-content: space-between;
+    // border: 2px solid red;
+
+    & > div {
+      // width: 31%;
+      // border: 2px solid black;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

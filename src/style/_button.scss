@@ -1,0 +1,68 @@
+.btn {
+  padding: 1em;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+
+  &-red {
+    background-color: red;
+  }
+
+  &-green {
+    background-color: green;
+
+    &:hover {
+      background-color: gainsboro;
+    }
+  }
+
+  &-yellow {
+    background-color: rgb(255, 221, 0);
+  }
+
+  &-border-white {
+    background-color: unset;
+    border: 3px solid white;
+
+    &:hover {
+      background-color: green;
+      border: 3px solid green;
+      color: white;
+    }
+  }
+
+  &-hide {
+    background-color: $dead-green;
+  }
+
+  &-border-green {
+    background-color: unset;
+    border: 3px solid $task-color;
+    color: $task-color;
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: green;
+      border: 3px solid green;
+      color: white;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background-color: rgb(72, 72, 72);
+    cursor: not-allowed;
+  }
+}
+
+.fa-solid {
+
+  &:hover {
+    cursor: pointer;
+  }
+}

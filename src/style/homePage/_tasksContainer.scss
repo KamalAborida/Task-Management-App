@@ -1,0 +1,15 @@
+.tasksContainer {
+  // border: 2px solid red;
+  height: 85%;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  align-items: flex-start;
+  justify-items: center;
+  overflow: scroll;
+
+  .btn {
+    align-self: center;
+  }
+}

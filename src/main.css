@@ -1,0 +1,528 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.btn {
+  padding: 1em;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+.btn-red {
+  background-color: red;
+}
+.btn-green {
+  background-color: green;
+}
+.btn-green:hover {
+  background-color: gainsboro;
+}
+.btn-yellow {
+  background-color: rgb(255, 221, 0);
+}
+.btn-border-white {
+  background-color: unset;
+  border: 3px solid white;
+}
+.btn-border-white:hover {
+  background-color: green;
+  border: 3px solid green;
+  color: white;
+}
+.btn-hide {
+  background-color: #A8D494;
+}
+.btn-border-green {
+  background-color: unset;
+  border: 3px solid #4FD443;
+  color: #4FD443;
+  font-size: 1.5rem;
+}
+.btn-border-green:hover {
+  background-color: green;
+  border: 3px solid green;
+  color: white;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn:disabled {
+  background-color: rgb(72, 72, 72);
+  cursor: not-allowed;
+}
+
+.fa-solid:hover {
+  cursor: pointer;
+}
+
+.inpt-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+.inpt-div .label {
+  margin-bottom: 10px;
+}
+.inpt-div .label-error {
+  color: red;
+}
+.inpt-div .inpt {
+  padding: 0.2em;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.inpt-div .inpt-error, .inpt-div .inpt-error:focus {
+  border: 2px solid red;
+}
+
+progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.landing-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: "Just Another Hand", cursive;
+}
+.landing-container h1 {
+  font-size: 3rem;
+  color: white;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 20%;
+}
+.landing-container h2 {
+  font-size: 2rem;
+  color: white;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.5rem;
+}
+
+.login-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+  font-size: 2rem;
+  height: 65%;
+}
+.login-form button {
+  max-width: 60%;
+  font-size: 1.2rem;
+}
+.login-form .inpt-div {
+  width: 100%;
+}
+
+.image-chooser {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  width: 100%;
+}
+.image-chooser p {
+  margin-bottom: 20px;
+}
+.image-chooser .images-div {
+  display: flex;
+  justify-content: space-between;
+}
+.image-chooser .images-div img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 2px solid black;
+}
+.image-chooser .images-div img:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgb(120, 120, 120);
+}
+.image-chooser-error p {
+  color: red;
+}
+
+.active-img {
+  transition: all;
+  box-shadow: 0 0 1px 3px #7cd253;
+  transform: scale(1.5) translateY(10);
+}
+
+.splash-screen {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #bdf0a5;
+}
+
+.task {
+  background-color: #4FD443;
+  border-radius: 15px;
+  padding: 1em;
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.task__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.task__description {
+  margin-bottom: 1em;
+  text-wrap: wrap;
+  overflow: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.task__date {
+  align-self: flex-end;
+  margin-bottom: 1em;
+}
+.task__actions-div {
+  display: flex;
+  justify-content: space-between;
+}
+.task__actions-div > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.homePage {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  font-family: "Just Another Hand", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+.sideBar {
+  background-color: #bdf0a5;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 2em 0;
+  position: relative;
+}
+.sideBar__logoProjects-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+}
+.sideBar .logo {
+  width: 50%;
+}
+.sideBar__projectsList {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  font-weight: 500;
+}
+.sideBar__projectsList > li {
+  margin-bottom: 20px;
+}
+.sideBar__projectsList > li:hover {
+  cursor: pointer;
+}
+.sideBar .btn-hide {
+  padding: 0.5em 1.5em;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.hide-sideBar .btn-hide {
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.activeProject {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.activeProject:hover {
+  cursor: not-allowed;
+}
+
+.tasksBar {
+  background-color: #bdf0a5;
+  width: 50%;
+  padding: 1em;
+  border-radius: 15px;
+  color: white;
+}
+.tasksBar__list {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+}
+.tasksBar__list > li:hover {
+  cursor: pointer;
+}
+
+.active-list-tab {
+  font-weight: bold;
+}
+
+.active-tab-indicator {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+}
+
+.upperBar {
+  padding: 1em;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userData {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 35%;
+  margin-left: 20px;
+}
+.userData img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.userData__name {
+  font-size: 1.5rem;
+}
+
+.pageContent {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tasksActionBar {
+  display: flex;
+  justify-content: space-around;
+  align-self: flex-end;
+  padding: 1em 3em;
+  font-size: 1.5rem;
+  width: 35%;
+}
+.tasksActionBar__deleteAction {
+  color: red;
+  font-weight: bolder;
+}
+.tasksActionBar__deleteAction:hover {
+  cursor: pointer;
+  color: rgb(207, 68, 68);
+}
+.tasksActionBar__activeProject {
+  font-weight: bolder;
+  color: #bdf0a5;
+}
+.tasksActionBar__activeProject:hover {
+  cursor: text;
+}
+
+.tasksContainer {
+  height: 85%;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  align-items: flex-start;
+  justify-items: center;
+  overflow: scroll;
+}
+.tasksContainer .btn {
+  align-self: center;
+}
+
+.taskModal-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4FD443;
+  padding: 1.5em;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+.taskModal-form input,
+.taskModal-form textarea {
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.5em;
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.taskModal-form__dateTime-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.taskModal-form__dateTime-div input {
+  width: 48%;
+}
+.taskModal-form__actions-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-self: flex-end;
+}
+.taskModal-form__title {
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+.projectModal-form {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  background-color: #4FD443;
+  padding: 1.5em;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+.projectModal-form input, .projectModal-form textarea {
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.5em;
+  display: block;
+  margin-bottom: 20px;
+}
+.projectModal-form__dateTime-div {
+  margin-bottom: 20px;
+}
+.projectModal-form__dateTime-div > input:first-of-type {
+  margin-right: 10px;
+}
+.projectModal-form__actions-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-self: flex-end;
+}
+.projectModal-form__title {
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+  z-index: 888;
+  position: absolute;
+}

@@ -1,0 +1,28 @@
+.inpt-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+
+  .label {
+    margin-bottom: 10px;
+
+    &-error {
+      color: red;
+    }
+  }
+
+
+  .inpt {
+    padding: 0.2em;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid black;
+
+    &-error, &-error:focus {
+      border: 2px solid red;
+    }
+  }
+}
+
+
+

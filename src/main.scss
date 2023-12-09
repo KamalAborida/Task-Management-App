@@ -1,0 +1,21 @@
+@import "./style/reset";
+@import "./style/variables";
+@import "./style/base";
+@import "./style/button";
+@import "./style/inpt";
+@import "./style/progress";
+
+@import "./style/landingPage/landing";
+@import "./style/landingPage/loginForm";
+@import "./style/landingPage/splashScreen";
+
+@import "./style/task";
+@import "./style/homePage/home";
+@import "./style/homePage/sideBar";
+@import "./style/homePage/tasksBar";
+@import "./style/homePage/upperBar";
+@import "./style/homePage/userData";
+@import "./style/homePage/pageContent";
+@import "./style/homePage/tasksContainer";
+@import "./style/homePage/addTaskModal";
+@import "./style/homePage/addProjectModal";

@@ -1,0 +1,34 @@
+.tasksBar {
+  background-color: $background-color;
+  // position: absolute;
+  // right: 5%;
+  // top: 5%;
+  width: 50%;
+  padding: 1em;
+  border-radius: 15px;
+  color: white;
+  
+  
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+
+    & > li {
+
+      &:hover {
+        cursor: pointer
+      }
+    }
+  }
+}
+
+.active-list-tab {
+  font-weight: bold;
+}
+
+.active-tab-indicator {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+}

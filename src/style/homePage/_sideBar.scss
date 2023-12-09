@@ -1,0 +1,76 @@
+.sideBar {
+  background-color: $background-color;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 2em 0;
+  position: relative;
+
+  &__logoProjects-div {
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  &__projectsList {
+    height: fit-content;
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: 500;
+
+    > li {
+      margin-bottom: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .btn-hide {
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  } 
+}
+
+.hide-sideBar {
+  // width: 5%;
+
+  .btn-hide {
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    height: min-content;
+  }
+}
+
+.activeProject {
+  font-size: 1.5rem;
+  font-weight: bolder;
+
+  &:hover {
+    cursor:not-allowed;
+  }
+}

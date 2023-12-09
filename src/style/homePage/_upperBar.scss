@@ -6,3 +6,13 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@include mobile-media-query {
+  .upperBar {
+    height: unset;
+    padding: 0.5em;
+    flex-direction: column;
+    // border: 2px solid red;
+    width: 100%;
+  }
+}

@@ -19,3 +19,29 @@
     letter-spacing: 0.5rem;
   }
 }
+
+@include mobile-media-query {
+  .landing-container {
+    flex-direction: column;
+    width: 100%;
+    height: unset;
+    // border: 2px solid red;
+    align-items: center;
+    justify-content: space-between;
+  
+    h1 {
+      font-size: 1.5rem;
+      color: white;
+      word-spacing: 0.5rem;
+      letter-spacing: 0.5rem;
+      margin-bottom: 20%;
+    }
+  
+    h2 {
+      font-size: 1rem;
+      color: white;
+      word-spacing: 0.5rem;
+      letter-spacing: 0.5rem;
+    }
+  }
+}

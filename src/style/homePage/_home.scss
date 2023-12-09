@@ -6,3 +6,15 @@
   font-family: 'Just Another Hand', cursive;
   font-family: 'Poppins', sans-serif;
 }
+
+@include mobile-media-query {
+  .homePage {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: unset;
+    // border: 2px solid black;
+  }
+}

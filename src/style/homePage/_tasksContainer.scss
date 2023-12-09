@@ -13,3 +13,9 @@
     align-self: center;
   }
 }
+
+@include mobile-media-query {
+  .tasksContainer {
+    grid-template-columns: 1fr;
+  }
+}

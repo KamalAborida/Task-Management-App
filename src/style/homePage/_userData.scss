@@ -18,3 +18,20 @@
     font-size: 1.5rem;
   }
 }
+
+@include mobile-media-query {
+  .userData {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: unset;
+    margin-left: unset;
+    margin: 20px 0;
+    // border: 2px solid black;
+
+    img {
+      margin-right: unset;
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,16 +1,21 @@
 import { useContext, useState } from "react";
-import logo from "../../Assets/Logo.svg";
 import BackDrop from "../general/BackDrop";
 import AddProjectModal from "./AddProjectModal";
 import { useNavigation } from "react-router-dom";
 import AuthContext from "../../context/auth-context";
 import { AnimatePresence, motion } from "framer-motion";
+import ProjectList from "./ProjectsList";
+import HideButton from "./HideButton";
+import LogoImg from "./LogoImg";
 
 function SideBar(props) {
   const [openModal, setOpenModal] = useState(false);
   const [openSideBar, setOpenSideBar] = useState(true);
   const ctx = useContext(AuthContext);
   const [activeProject, setactiveProject] = useState(ctx.activeProject);
+  // const [mobileMode, setMobileMode] = useState(false);
+  // const [landingPageOpened, setLandingPageOpened] = useState(true)
+  const [windowSize, setWindowSize] = useState(window.screen.width);
   const navigation = useNavigation();
 
   if (navigation.state !== "idle" && openModal) {
@@ -29,11 +34,24 @@ function SideBar(props) {
     setOpenSideBar((prev) => !prev);
   };
 
+  // const checkWidth = () => {
+  //   if (landingPageOpened) {
+  //     if (window.screen.width < 900) {
+  //       setMobileMode(true);
+  //     } else {
+  //       setMobileMode(false);
+  //     }
+  //   }
+  //   setLandingPageOpened(false)
+  // };
+
   const projectHandler = (e) => {
     setactiveProject(e.target.closest("li").textContent);
     ctx.activeProject = e.target.closest("li").textContent;
     ctx.updateApp();
   };
+
+  // console.log(mobileMode);
 
   return (
     <>
@@ -50,74 +68,50 @@ function SideBar(props) {
         )}
       </AnimatePresence>
 
-      <motion.div
-        animate={{ width: !openSideBar ? 50 : 250 }}
-        layout
-        className={`sideBar ${!openSideBar ? "hide-sideBar" : ""}`}
-      >
-        <AnimatePresence>
-          {openSideBar && (
-            <div className="sideBar__logoProjects-div">
-              <motion.img
-                animate={{ opacity: [0, 1], y: 0, x: [-100, 20, 0] }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ type: "keyframes" }}
-                src={logo}
-                alt="logo"
-                className="logo"
-                key="img"
-              />
-              <motion.ul
-                animate={{ opacity: [0, 1], y: 0, x: [-100, 100, 0] }}
-                exit={{
-                  y: [10, 0],
-                  x: [0, -200],
-                  opacity: [1, 0],
-                }}
-                transition={{ type: "keyframes", duration: 0.5 }}
-                className="sideBar__projectsList"
-                key="ul"
-              >
-                {ctx.projectsList &&
-                  ctx.projectsList.map((project) => {
-                    return (
-                      <motion.li
-                        key={project.id}
-                        onClick={projectHandler}
-                        className={`${
-                          project.name === ctx.activeProject
-                            ? "activeProject"
-                            : ""
-                        }`}
-                      >
-                        {project.name}
-                      </motion.li>
-                    );
-                  })}
-                <motion.button
-                  onClick={addProjectHandler}
-                  className="btn btn-border-white"
-                  key="btn"
-                >
-                  Add project +
-                </motion.button>
-              </motion.ul>
-            </div>
-          )}
-        </AnimatePresence>
-
-        <motion.button
+      {windowSize > 900 && (
+        <motion.div
+          animate={{
+            width: !openSideBar ? 50 : 250,
+          }}
           layout
-          // animate={{ x: openSideBar ? 0 : -10 }}
-          className="btn btn-hide"
-          onClick={hideSideBarHandler}
+          className={`sideBar ${!openSideBar ? "hide-sideBar" : ""}`}
+          key="sideBarDiv"
         >
           <AnimatePresence>
-            {openSideBar && <p>Hide</p>}{" "}
-            <motion.i layout className="fa-solid fa-eye"></motion.i>
+            {openSideBar && (
+              <div className="sideBar__logoProjects-div" key="logoDiv">
+                <LogoImg />
+                <ProjectList
+                  projectHandler={projectHandler}
+                  addProjectHandler={addProjectHandler}
+                />
+              </div>
+            )}
           </AnimatePresence>
-        </motion.button>
-      </motion.div>
+
+          <HideButton
+            hideSideBarHandler={hideSideBarHandler}
+            openSideBar={openSideBar}
+          />
+        </motion.div>
+      )}
+
+      {windowSize < 900 && (
+        <div className={`sideBar`} key="sideBarDiv">
+          <div className="sideBar__logoProjects-div" key="logoDiv">
+            <LogoImg />
+            <ProjectList
+              projectHandler={projectHandler}
+              addProjectHandler={addProjectHandler}
+            />
+          </div>
+
+          <HideButton
+            hideSideBarHandler={hideSideBarHandler}
+            openSideBar={openSideBar}
+          />
+        </div>
+      )}
     </>
   );
 }

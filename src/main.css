@@ -150,6 +150,28 @@ progress {
   letter-spacing: 0.5rem;
 }
 
+@media screen and (max-width: 900px) {
+  .landing-container {
+    flex-direction: column;
+    width: 100%;
+    height: unset;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .landing-container h1 {
+    font-size: 1.5rem;
+    color: white;
+    word-spacing: 0.5rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 20%;
+  }
+  .landing-container h2 {
+    font-size: 1rem;
+    color: white;
+    word-spacing: 0.5rem;
+    letter-spacing: 0.5rem;
+  }
+}
 .login-part {
   display: flex;
   justify-content: center;
@@ -208,6 +230,28 @@ progress {
   transform: scale(1.5) translateY(10);
 }
 
+@media screen and (max-width: 900px) {
+  .login-part {
+    width: 90%;
+  }
+  .login-form {
+    padding: 0.5em;
+    font-size: 2rem;
+    height: unset;
+  }
+  .login-form button {
+    font-size: 1rem;
+  }
+  .login-form .inpt-div {
+    margin-bottom: 20px;
+  }
+  .image-chooser {
+    margin-bottom: 20px;
+  }
+  .image-chooser p {
+    margin-bottom: 10px;
+  }
+}
 .splash-screen {
   width: 50%;
   height: 100vh;
@@ -218,6 +262,13 @@ progress {
   background-color: #bdf0a5;
 }
 
+@media screen and (max-width: 900px) {
+  .splash-screen {
+    width: 100%;
+    height: 100vh;
+    padding: 1em 0;
+  }
+}
 .task {
   background-color: #4FD443;
   border-radius: 15px;
@@ -263,6 +314,16 @@ progress {
   font-family: "Poppins", sans-serif;
 }
 
+@media screen and (max-width: 900px) {
+  .homePage {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: unset;
+  }
+}
 .sideBar {
   background-color: #bdf0a5;
   width: 20%;
@@ -329,6 +390,19 @@ progress {
   cursor: not-allowed;
 }
 
+@media screen and (max-width: 900px) {
+  .sideBar {
+    width: 100%;
+    height: unset;
+    justify-content: space-around;
+  }
+  .sideBar .logo {
+    width: 70%;
+  }
+  .sideBar .btn-hide {
+    display: none;
+  }
+}
 .tasksBar {
   background-color: #bdf0a5;
   width: 50%;
@@ -355,6 +429,17 @@ progress {
   background-color: white;
 }
 
+@media screen and (max-width: 900px) {
+  .tasksBar {
+    width: 100%;
+    padding: 0.5em;
+  }
+  .tasksBar__list {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.7rem;
+  }
+}
 .upperBar {
   padding: 1em;
   height: 10%;
@@ -363,6 +448,14 @@ progress {
   align-items: center;
 }
 
+@media screen and (max-width: 900px) {
+  .upperBar {
+    height: unset;
+    padding: 0.5em;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .userData {
   display: flex;
   justify-content: space-evenly;
@@ -382,6 +475,20 @@ progress {
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 900px) {
+  .userData {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: unset;
+    margin-left: unset;
+    margin: 20px 0;
+  }
+  .userData img {
+    margin-right: unset;
+    margin-bottom: 10px;
+  }
+}
 .pageContent {
   width: 95%;
   display: flex;
@@ -413,6 +520,14 @@ progress {
   cursor: text;
 }
 
+@media screen and (max-width: 900px) {
+  .tasksActionBar {
+    align-self: center;
+    padding: 0.5em;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+}
 .tasksContainer {
   height: 85%;
   padding: 1em;
@@ -427,6 +542,11 @@ progress {
   align-self: center;
 }
 
+@media screen and (max-width: 900px) {
+  .tasksContainer {
+    grid-template-columns: 1fr;
+  }
+}
 .taskModal-form {
   position: absolute;
   top: 50%;

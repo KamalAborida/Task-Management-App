@@ -50,7 +50,7 @@
     display: flex;
     justify-content: space-between;
     width: 70%;
-  } 
+  }
 }
 
 .hide-sideBar {
@@ -71,6 +71,23 @@
   font-weight: bolder;
 
   &:hover {
-    cursor:not-allowed;
+    cursor: not-allowed;
+  }
+}
+
+@include mobile-media-query {
+  .sideBar {
+    // border: 2px solid red;
+    width: 100%;
+    height: unset;
+    justify-content: space-around;
+
+    .logo {
+      width: 70%;
+    }
+
+    .btn-hide {
+      display: none;
+    }
   }
 }

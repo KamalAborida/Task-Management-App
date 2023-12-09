@@ -4,3 +4,11 @@ $dead-green: #A8D494;
 $accent-color: #b6ec44;
 $background-color: #bdf0a5;
 $edit-color: #ecd144;
+
+$non-desktopScreen: 900px;
+
+@mixin mobile-media-query {
+  @media screen and (max-width: $non-desktopScreen) {
+    @content;
+  }
+}

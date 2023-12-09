@@ -33,3 +33,13 @@
     }
   }
 }
+
+@include mobile-media-query {
+  .tasksActionBar {
+    align-self: center;
+    padding: 0.5em;
+    font-size: 1.1rem;
+    width: 100%;
+    // border: 2px solid black;
+  }
+}

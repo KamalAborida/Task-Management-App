@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Task-Management-App/static/css/main.c630fe57.css",
-    "main.js": "/Task-Management-App/static/js/main.5d56007f.js",
+    "main.css": "/Task-Management-App/static/css/main.a7f47fb8.css",
+    "main.js": "/Task-Management-App/static/js/main.3af08433.js",
     "static/js/787.933521ff.chunk.js": "/Task-Management-App/static/js/787.933521ff.chunk.js",
     "static/media/imgChooser2.jpg": "/Task-Management-App/static/media/imgChooser2.3b61f39d77b58db168f2.jpg",
     "static/media/imgChooser4.jpg": "/Task-Management-App/static/media/imgChooser4.88c4757638aeb81a75af.jpg",
@@ -9,12 +9,12 @@
     "static/media/imgChooser3.jpg": "/Task-Management-App/static/media/imgChooser3.a5f3a63e654db02c3f87.jpg",
     "static/media/Logo.svg": "/Task-Management-App/static/media/Logo.093f01d0c1d3a686ee82c465e135c5bf.svg",
     "index.html": "/Task-Management-App/index.html",
-    "main.c630fe57.css.map": "/Task-Management-App/static/css/main.c630fe57.css.map",
-    "main.5d56007f.js.map": "/Task-Management-App/static/js/main.5d56007f.js.map",
+    "main.a7f47fb8.css.map": "/Task-Management-App/static/css/main.a7f47fb8.css.map",
+    "main.3af08433.js.map": "/Task-Management-App/static/js/main.3af08433.js.map",
     "787.933521ff.chunk.js.map": "/Task-Management-App/static/js/787.933521ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c630fe57.css",
-    "static/js/main.5d56007f.js"
+    "static/css/main.a7f47fb8.css",
+    "static/js/main.3af08433.js"
   ]
 }

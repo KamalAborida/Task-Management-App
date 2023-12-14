@@ -48,7 +48,7 @@ function AddTaskModal(props) {
 
   return ReactDOM.createPortal(
     <motion.div
-      animate={{ y: [-250, -150], opacity: [0, 1], x: [-200] }}
+      animate={{ y: [-250, -150], opacity: [0, 1] }}
       exit={{ y: [-150, -250], opacity: [0] }}
       className="taskModal-form"
     >

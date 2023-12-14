@@ -608,9 +608,9 @@ progress {
   .taskModal-form {
     position: absolute;
     top: 50%;
-    left: 60%;
+    left: 5%;
     padding: 1em;
-    max-width: 90%;
+    width: 90%;
   }
 }
 .projectModal-form {
